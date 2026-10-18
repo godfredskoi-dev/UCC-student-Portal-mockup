@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uccstudentportal.login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="portalContainer">
+   <header class="portalHeader">
+    <div class="portalBanner">
+    <img src="assets/University-of-Cape-Coast-UCC.webp" alt="schoolbadge">
+
+    <span>Online Students' Portal</span>
+    </div>
+   </header>
+  <main> <h1 class="font">Announcements & Notifications!</h1>
+   <div id="info"> <p class="font"><strong> Financial Aid (Student Loan Trust Fund)</strong></p>
+<p>The Student Loan Trust Fund(SLTF) was established in December 2005 under the Trustee Incorporation ACT 1962, ACT 820</p>
+<p>The objectives of the Trust Fund  are to provide financial resourrces for the sound management of the Trust for the benefit of students and to help promote and facilitatethe national ideas enshrined in Article 28 and 38 of the 1992 constitution.</p>
+<p>Students who want to apply for the financial aid should visit the following links below to know more about the Trust Fund and it's application process</p>
+<ul>
+    <li><a href="">Student Loan Trust Fund</a></li>
+    <li><a href="">Financial Aid</a></li>
+    <li><a href="">Financial Aid Application Requirements</a></li>
+</ul>
+  </div>
+<form action="">
+    <div class="inputGroup">
+        <span class="inputIcon"></span>
+        <input class="input" id="RegNum" type="text" placeholder=Registration Number pattern="[A-Z]{2}/[A-Z]{3}/[0-9]{2}/[0-9]{4}">
+    </div>
+
+    <div class="inputGroup">
+        <span class="inputIcon"></span>
+        <input class="input" id="pWord" type=password placeholder=Password>
+    </div>
+
+    <div class="submit">
+        <button>Login</button>
+        <a href="#" class="forgotLink">Forgot password? Reset here!</a>
+    </div>
+</form>
+
+</main>
+<hr>
+<footer>
+<h3 class="font">Helplines (Working hours 08:00-18:00)</h3>
+    <ul>
+        <li>Main UCC Accounts office : 0508118646</li>
+        <li>Fees enquiries (CoDe Students only) call:
+           <br> <strong>033-2092-0444 / 033-2092-050</strong>
+        </li>
+        <li>System support call MIS office on: <strong>054-5802-062 or 0545801203</strong></li>
+        <li>System support Whatsapp Only MIS office on <strong>0244080587</strong></li>
+    </ul>
+</footer>
+</div>
+<script>
+    
+const loginForm = document.querySelector('form');
+
+loginForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop the form from submitting instantly
+
+    // Get the values the user typed in
+    const regNum = document.getElementById('RegNum').value.trim();
+    const password = document.getElementById('pWord').value.trim();
+
+    // Set your expected/stored credentials (you can change these to test)
+    const storedRegNum = 'AG/AGR/25/0136';
+    const storedPassword = '041933';
+
+    // Compare what was typed with the stored values
+    if (regNum === storedRegNum && password === storedPassword) {
+        // Correct! Redirect to your GPA results page
+        setTimeout(function(){
+             window.location.href = 'results.html';
+        }, 1500);
+       
+    } else {
+        // Incorrect credentials
+        Alert('Invalid Registration Number or Password. Please try again.');
+    }
+});
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=”width=device-width, initial-scale="1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+   
+    <!--MAIN CONTAINER -->
+    <div id="mainCon">
+        <!--Top Nav-->
+              <div class="top_nav">
+                      <div class="cover_text">
+                 <img src="assets/University-of-Cape-Coast-UCC.webp" alt="University">
+                 <h2>Student's Portal</h2>
+                      </div>
+                    <div class="user_profile">
+                        <span>SIGNED IN AS</span>
+                        <strong>BIO</strong>
+                        <img src="assets/IMG-20261018-WA0000.jpg" alt="Profile">
+                        <button id="signOut" class="logout_btn">Logout</button>
+                    </div>
+                </div>
+        
+        <!--LEFT SIDE AND RIGHT SIDE-->
+        <div class="main_layout">
+            <!--LEFT SIDE: sidebar-->
+        <div class="side_navbar">
+          
+            <button class="mainBtn">Service Information</button>
+            <button class="mainBtn">Personal Details</button>
+            <button class="mainBtn">First Generational Information</button>
+            <button class="mainBtn">Verify details</button>
+            <button class="mainBtn">Elearning/MyUCC</button>
+            <button class="mainBtn">Past Question (Manual)</button>
+            <button class="mainBtn">Click here to build cv</button>
+            <button class="mainBtn">Matriculation oath</button>
+            <button class="mainBtn">MTN Data Bundle</button>
+            <button class="mainBtn">Statement Of Results</button>
+            <button class="mainBtn">Survey</button>
+            <button class="mainBtn">Registration</button>
+            <button class="mainBtn">Update GH-Card</button>
+            <button class="mainBtn">Fees</button>
+            <button class="mainBtn">Counselling Services</button>
+            <button class="mainBtn">FAQs</button>
+            <button class="mainBtn">Reset password</button>
+
+        </div>
+
+        <!--RIGHT SIDE: The Sliding Wrapper -->
+        <div id="Wrapper">
+            <div class="portal_content">
+                
+                
+          
+
+                <!--2. Main content -->
+                <div class="portal_header">
+                    <h1>Student Self Verification</h1>
+                    <p>University of Cape Coast · Statement of Results & Progression Status</p>
+                </div>
+
+                <!--3. STUDENT INFO & STATS -->
+                <div class="info_card">
+                    <div class="info_grid">
+                        <div>
+                            <span class="label">STUDENT NAME</span>
+                            <p class="value">BIO BEDIAKO KOTOKI</p>
+                        </div>
+                        <div>
+                            <span class="label">REGISTRATION NO.</span>
+                            <p class="value">AG/AGR/25/0136</p>
+                        </div>
+                        <div>
+                            <span class="label">PROGRAMME</span>
+                            <p class="value">BACHELOR OF SCIENCE (AGRICULTURE)</p>
+                        </div>
+                        <div>
+                            <span class="label">STATUS</span>
+                            <span class="status_badge">Continuing</span>
+                        </div>
+                    </div>
+
+                    <div class="stats_grid">
+                        <div>
+                            <h2 id="cgpaDisplay"></h2>
+                            <span>CUMULATIVE GPA</span>
+                        </div>
+                        <div>
+                            <h2 id="creditsDisplay"></h2>
+                            <span>CREDITS REGISTERED</span>
+                        </div>
+                        <div>
+                            <h2>100</h2>
+                            <span>CURRENT LEVEL</span>
+                        </div>
+                        <div>
+                            <h2>2</h2>
+                            <span>SEMESTERS ON RECORD</span>
+                        </div>
+                    </div>
+                </div>
+
+                      <!--4. COURSE STATUS KEY (Replaced the alert box) -->
+                <div class="status_key_card">
+                    <h3 class="key_title">COURSE STATUS KEY</h3>
+                    <div class="key_grid">
+                        <div class="key_item">
+                            <span class="key_badge_inactive_key">Inactive</span> Pending assignment to Lecturer
+                        </div>
+                        <div class="key_item">
+                            <span class="key_badge_lec_key">With Lect.</span> Assessment sheet with Lecturer
+                        </div>
+                        <div class="key_item">
+                            <span class="key_badge_dept_key">With Dept.</span> Assessment sheet with Department
+                        </div>
+                        <div class="key_item">
+                            <span class="key_badge_fac_key">With Facty.</span> Assessment sheet with Faculty, pending approval
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!--5. RESULTS TABLES -->
+                <!--Semester 1 -->
+                <div class="semester_section">
+                    <div class="semester_header">
+                        <h3>2025/2026 Academic Year</h3>
+                        <span class="sem_badge">FIRST SEMESTER</span>
+                    </div>
+                    <table id="firstSem" class="grades_table">
+                        <thead>
+                            <tr>
+                                <th>CODE</th>
+                                <th>TITLE</th>
+                                <th>STATUS</th>
+                                <th>CREDITS</th>
+                                <th>GRADE</th>
+                                <th>GRADE POINT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>ASS101A</strong></td><td>ANATOMY AND PHYSIOLOGY OF FARM ANIMALS</td><td></td><td class="creditCell">3</td><td><span class="gradeB">B</span></td><td class="pointCell">9.0</td></tr>
+                            <tr><td><strong>AGN101A</strong></td><td>INTRODUCTORY MATHEMATICS AND STATISTICS FOR AGRICULTURE</td><td></td><td class="creditCell">2</td><td><span class="gradeB">B</span></td><td class="pointCell">6.0</td></tr>
+                            <tr><td><strong>AGN103A </strong></td><td>INTRODUCTORY CHEMISTRY FOR AGRICULTURE</td><td></td><td class="creditCell">3</td><td><span class="gradeB">B</span></td><td class="pointCell">9.0</td></tr>
+                            <tr><td><strong>AGN107A</strong></td><td>INTRODUCTORY GENETICS FOR AGRICULTURE</td><td></td><td class="creditCell">1</td><td><span class="gradeB">B</span></td><td class="pointCell">3.0</td></tr>
+                            <tr><td><strong>ASS101A</strong></td><td>INTRODUCTORY SOIL SCIENCE</td><td></td><td class="creditCell">3</td><td><span class="gradeB">B</span></td><td class="pointCell">9.0</td></tr>   
+                            <tr><td><strong>CMS107</strong></td><td>COMMUNICATIVE SKILLS</td><td></td><td class="creditCell">3</td><td><span class="gradeC">C</span></td><td class="pointCell">6.0</td></tr>  
+                            <tr><td><strong>ILT101</strong></td><td>INFORMATION LITERACY</td><td></td><td class="creditCell">1</td><td><span class="gradeC">C+</span></td><td class="pointCell">2.5</td></tr>    
+                        </tbody>
+                        <tfoot>
+                            <tr class="summaryRow">
+                                <td>
+                                    <div class="summaryContainer">
+                                        <span class="gpaText">GPA <strong id="gpa1"></strong></span>
+                                       
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="summaryContainer">
+                                        <span class="cgpaText">CGPA <strong id="cgpa1"></strong></span>
+                                    </div>
+                                </td>
+
+                                <td></td>
+
+                                <td>
+                                  <strong id="totalCredits1"></strong>    
+                                </td>
+
+                                <td></td>
+                              
+                                <td>
+                                  <strong id="TotalPoints1"></strong>    
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!--Semester 2 -->
+                <div class="semester_section">
+                    <div class="semester_header">
+                        <h3>2025/2026 Academic Year</h3>
+                        <span class="sem_badge">SECOND SEMESTER</span>
+                    </div>
+                    <table id="secondSem" class="grades_table">
+                        <thead>
+                            <tr>
+                                <th>CODE</th>
+                                <th>TITLE</th>
+                                <th>STATUS</th>
+                                <th>CREDITS</th>
+                                <th>GRADE</th>
+                                <th>GRADE POINT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         <tr><td><strong>ACR102A</strong></td><td>AGRICULTURAL BOTANY</td><td></td><td class="creditCell2">2</td><td><span class="gradeA">A</span></td><td class="pointCell2">8.0</td></tr>
+                         <tr><td><strong>AEN101A</strong></td><td>INTRODUCTION TO AGRICULTURAL ENGINEERING</td><td></td><td class="creditCell2">2</td><td><span class="gradeB">B</span></td><td class="pointCell2">6.0</td></tr>
+                         <tr><td><strong>AEN104A</strong></td><td>ELIMENTARY LAND SURVEYING</td><td></td><td class="creditCell2">1</td><td><span class="gradeA">A</span></td><td class="pointCell2">4.0</td></tr>
+                         <tr><td><strong>AEX103A</strong></td><td>PSYCHOLOGY OF ADULT LEARNING</td><td></td><td class="creditCell2">2</td><td><span class="gradeB">B+</span></td><td class="pointCell2">7.0</td></tr>
+                         <tr><td><strong>AGN108A</strong></td><td>PRINCIPLES OF POSITION AND SUSTAINABLE AGRICULTURE</td><td></td><td class="creditCell2">2</td><td><span class="gradeB">B</span></td><td class="pointCell2">6.0</td></tr>     
+                         <tr><td><strong>AGN12A</strong></td><td>ICT FOR AGRICULTURE</td><td></td><td class="creditCell2">1</td><td><span class="gradeA">A</span></td><td class="pointCell2">4.0</td></tr>
+                         <tr><td><strong>ASP103A</strong></td><td>POPULATIION DEVELOPMENT AND AFRICAN ENVIRONMENT</td><td></td><td class="creditCell2">3</td><td><span class="gradeC">C+</span></td><td class="pointCell2">7.5</td></tr>
+                         <tr><td><strong>CMS108</strong></td><td>COMMUNICATIVE SKILLS</td><td></td><td class="creditCell2">3</td><td><span class="gradeC">C+</span></td><td class="pointCell2">7.5</td></tr>
+                         <tr><td><strong>ITS101</strong></td><td>INFORMATION TECHNOLOGY SKILLS</td><td></td><td class="creditCell2">1</td><td><span class="gradeA">A</span></td><td class="pointCell2">4.0</td></tr>
+                         
+                        </tbody>
+
+                         <tfoot>
+                            <tr class="summaryRow">
+                                <td>
+                                    <div class="summaryContainer">
+                                        <span class="gpaText">GPA <strong id="gpa2"></strong></span>
+                                       
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="summaryContainer">
+                                        <span class="cgpaText">CGPA <strong id="cgpa2"></strong></span>
+                                    </div>
+                                </td>
+
+                                <td></td>
+                             
+
+                                <td>
+                                  <strong id="totalCredits2"></strong>    
+                                </td>
+
+                                 <td></td>
+        
+                                <td>
+                                  <strong id="TotalPoints2"></strong>    
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,670 @@
+
+
+
+/* ==========================================
+1.	GLOBAL & RESET STYLES
+   ========================================== */
+•	{
+  Box-sizing: border-box;
+  Margin: 0;
+  Padding: 0;
+  Font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+}
+
+Body {
+  Background-color: #f4f6f8;
+  Color: #333333;
+  Line-height: 1.5;
+}
+
+/* ==========================================
+2.	MAIN LAYOUT STRUCTURE
+   ========================================== */
+#mainCon {
+  Display: flex;
+ flex-direction: column;
+  overflow: hidden;
+  Min-height: 100vh;
+  Width: 100%;
+}
+
+/* LEFT SIDE: Sidebar Cover / Image Container */
+
+.top_nav {
+  Display: flex;
+  Justify-content: space-between;
+  Align-items: center;
+  width: 100%;
+ padding: 10px 25px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  
+
+  
+}
+.cover_text{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.cover_text img{
+   Width: 50px;
+  Height: 50px;
+  Object-fit: contain;
+  Margin-bottom: 12px;
+}
+
+.main_layout{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.side_navbar {
+  Width: 250px;
+  Background-color: #ffffff;
+  Border-right: 1px solid #e1e4e8;
+  Padding: 24px 16px;
+  Display: flex;
+  Flex-direction: column;
+  Align-items: center;
+  Flex-shrink: 0;
+  gap: 10px;
+
+}
+
+
+
+.mainBtn {
+  Width: 100%;
+  Padding: 10px 16px;
+  Background-color: #ffffff;
+  Color: black;
+  Border: none;
+  Border-radius: 6px;
+  Font-weight: 600;
+  Cursor: pointer;
+  Transition: background-color 0.2s;
+}
+
+.mainBtn:hover {
+  Background-color: #1d4fd8e5;
+}
+
+/* RIGHT SIDE: Portal Content Area */
+#Wrapper {
+  Flex: 1;
+  Padding: 10px 15px;
+  Background-color: #f4f6f8;
+  Overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.portal_content {
+  Max-width: 1100px;
+  Margin: 0 auto;
+}
+
+
+
+.user_profile {
+  Display: flex;
+  Align-items: center;
+  Gap: 10px;
+  Font-size: 0.85rem;
+}
+
+.user_profile span {
+  Color: #888888;
+  Font-weight: 600;
+  Font-size: 0.75rem;
+}
+
+.user_profile strong {
+  Color: #111827;
+}
+
+.user_profile img {
+  Width: 50px;
+  Height: 50px;
+  Border-radius: 50%;
+  Background-color: #e5e7eb;
+  Object-fit: cover;
+}
+
+.logout_btn {
+  Background: transparent;
+  Border: 1px solid #d1d5db;
+  Padding: 6px 12px;
+  Border-radius: 4px;
+  Color: #374151;
+  Font-size: 0.8rem;
+  Font-weight: 500;
+  Cursor: pointer;
+}
+
+.logout_btn:hover {
+  Background-color: #f3f4f6;
+}
+
+/* ==========================================
+4.	HEADER SECTION
+   ========================================== */
+.portal_header {
+  Background-color: #1a365d; /* Dark Blue UCC Banner */
+  Color: #ffffff;
+  Padding: 24px;
+  Border-radius: 8px 8px 0 0;
+  Border-bottom: 4px solid #f59e0b; /* Yellow accent line */
+}
+
+.portal_header h1 {
+  Font-size: 1.5rem;
+  Font-weight: 700;
+  Margin-bottom: 4px;
+}
+
+.portal_header p {
+  Font-size: 0.85rem;
+  Opacity: 0.85;
+}
+
+/* ==========================================
+5.	STUDENT INFO & STATS CARD
+   ========================================== */
+.info_card {
+  Background-color: #ffffff;
+  Padding: 24px;
+  Border-radius: 0 0 8px 8px;
+  Box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  Margin-bottom: 20px;
+}
+
+.info_grid {
+  Display: grid;
+  Grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  Gap: 20px;
+  Margin-bottom: 28px;
+}
+
+.info_grid .label {
+  Display: block;
+  Font-size: 0.7rem;
+  Font-weight: 700;
+  Color: #6b7280;
+  Letter-spacing: 0.05em;
+  Margin-bottom: 4px;
+}
+
+.info_grid .value {
+  Font-size: 0.9rem;
+  Font-weight: 600;
+  Color: #111827;
+}
+
+.status_badge {
+  Display: inline-block;
+  Background-color: #2563eb;
+  Color: #ffffff;
+  Padding: 3px 10px;
+  Border-radius: 12px;
+  Font-size: 0.75rem;
+  Font-weight: 600;
+}
+
+/* STATS ROW */
+.stats_grid {
+  Display: grid;
+  Grid-template-columns: repeat(4, 1fr);
+  Gap: 16px;
+  Padding-top: 20px;
+  Border-top: 1px solid #f3f4f6;
+  Text-align: center;
+}
+
+.stats_grid h2 {
+  Font-size: 1.8rem;
+  Font-weight: 700;
+  Color: #1e3a8a;
+  Line-height: 1.1;
+}
+
+.stats_grid span {
+  Font-size: 0.7rem;
+  Font-weight: 700;
+  Color: #6b7280;
+  Letter-spacing: 0.05em;
+}
+
+/* ==========================================
+6.	COURSE STATUS KEY CARD
+   ========================================== */
+.status_key_card {
+  Background-color: #ffffff;
+  Padding: 20px 24px;
+  Border-radius: 8px;
+  Box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  Margin-bottom: 20px;
+}
+
+.key_title {
+  Font-size: 0.75rem;
+  Font-weight: 700;
+  Color: #4b5563;
+  Letter-spacing: 0.05em;
+  Margin-bottom: 12px;
+}
+
+.key_grid {
+  Display: grid;
+  Grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  Gap: 12px;
+}
+
+.key_item {
+  Font-size: 0.8rem;
+  Color: #4b5563;
+  Display: flex;
+  Align-items: center;
+  Gap: 8px;
+}
+
+/* Badge styling for key status items */
+[class^=”key_badge_”] {
+  Display: inline-block;
+  Padding: 2px 8px;
+  Border-radius: 4px;
+  Font-size: 0.75rem;
+  Font-weight: 600;
+  Background-color: #f3f4f6;
+  Color: #374151;
+}
+
+/* ==========================================
+7.	RESULTS TABLES
+   ========================================== */
+.semester_section {
+  Background-color: #ffffff;
+  Border-radius: 8px;
+  Box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  Margin-bottom: 24px;
+  Overflow: hidden;
+}
+
+.semester_header {
+  Display: flex;
+  Justify-content: space-between;
+  Align-items: center;
+  Padding: 16px 24px;
+  Background-color: #ffffff;
+  Border-bottom: 1px solid #f3f4f6;
+}
+
+.semester_header h3 {
+  Font-size: 0.95rem;
+  Font-weight: 700;
+  Color: #1e3a8a;
+}
+
+.sem_badge {
+  Background-color: #eff6ff;
+  Color: #1e40af;
+  Padding: 4px 10px;
+  Border-radius: 12px;
+  Font-size: 0.7rem;
+  Font-weight: 700;
+  Letter-spacing: 0.05em;
+}
+
+.grades_table {
+  Width: 100%;
+  Border-collapse: collapse;
+  Text-align: left;
+}
+
+.grades_table th {
+  Background-color: #f9fafb;
+  Color: #6b7280;
+  Font-size: 0.7rem;
+  Font-weight: 700;
+  Letter-spacing: 0.05em;
+  Padding: 12px 24px;
+  Border-bottom: 1px solid #e5e7eb;
+}
+.grades_table tfoot {
+     Background-color: #f9fafb;
+  Color: #6b7280;
+  Font-size: 0.7rem;
+  Font-weight: 700;
+  Letter-spacing: 0.05em;
+  Padding: 12px 24px;
+  Border-bottom: 1px solid #e5e7eb;
+
+}
+
+.grades_table td {
+  Padding: 12px 24px;
+  Font-size: 0.85rem;
+  Color: #374151;
+  Border-bottom: 1px solid #f3f4f6;
+}
+
+.grades_table tbody tr:last-child td {
+  Border-bottom: none;
+}
+
+.grades_table tbody tr:hover {
+  Background-color: #f9fafb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #mainCon {
+    Flex-direction: column;
+  }
+  .image_side {
+    Width: 100%;
+    Border-right: none;
+    Border-bottom: 1px solid #e1e4e8;
+  }
+  .stats_grid {
+    Grid-template-columns: repeat(2, 1fr);
+    Gap: 20px;
+  }
+}
+/* ==========================================
+   GRADE COLOR CODING CLASSES (Clean Naming)
+   ========================================== */
+
+/* A: Green */
+.gradeA {
+  background-color: #10b981;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* B and B+: Royal Blue */
+.gradeB {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* C: Sea / Light Blue */
+.gradeC {
+  background-color: #0ea5e9;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* D and D+: Yellow */
+.gradeD,
+.gradeDPlus {
+  background-color: #f59e0b;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+}
+.summaryContainer{
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #334155;
+    margin-right: 8px;
+}
+
+/** Log IN Page**/
+
+
+/* Reset and Base Layout */
+•	{
+    Box-sizing: border-box;
+    Margin: 0;
+    Padding: 0;
+}
+
+ Body {
+    Background-color: #006699; /* Deep UCC Portal Blue outer background */
+    Font-family: Arial, Helvetica, sans-serif;
+    Display: flex;
+    Justify-content: center;
+    Align-items: flex-start;
+    Min-height: 100vh;
+    Padding: 0;
+}
+
+.portalContainer{
+  height: fit-content;
+   Background-color: #f2f2f2; /* Light grey portal page background */
+    Width: 100%;
+    Max-width: 480px; /* Mobile portal card width */
+    Min-height: 100vh;
+    Padding: 20px;
+    Box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    Position: relative;
+}
+/* Central White Portal Container */
+
+
+/* Top Banner Header */
+.portalHeader {
+    Display: flex;
+    Justify-content: center;
+    Margin-top: -20px; /* Pull header flush to top edge */
+    Margin-left: -20px;
+    Margin-right: -20px;
+    Margin-bottom: 25px;
+    position: relative;
+    overflow: visible;
+}
+
+.portalBanner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    Background-color: #eeee01; /* Yellow pill background */
+    Border: 5px solid #d40303; /* Red outer border */
+    Border-radius: 30px 30px 30px 30px; /* Rounded bottom curve */
+    Padding: 8px 25px;
+    Display: flex;
+    Align-items: center;
+    Gap: 10px;
+    Box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.portalBanner img {
+    Height: 28px;
+    Width: auto;
+}
+
+.portalBanner span {
+    Font-size: 12px;
+    Font-weight: bold;
+    Color: #003366;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Headings */
+main{
+  margin-top: 20px;
+}
+H1.font {
+    Font-size: 20px;
+    Font-style: italic;
+    Color: #333333;
+    Margin-bottom: 15px;
+    Text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Announcements Box */
+#info {
+ 
+    Border: 1px solid #666666;
+    Border-radius: 8px;
+    Padding: 15px;
+    Background-color: #ffffff;
+    Font-size: 12px;
+    Color: #555555;
+    Line-height: 1.5;
+    Margin-bottom: 350px;
+}
+
+#info p {
+    Margin-bottom: 10px;
+}
+
+#info p strong {
+    Font-size: 13px;
+    Color: #333333;
+}
+
+#info ul {
+    Margin-left: 20px;
+    Margin-top: 8px;
+}
+
+#info ul li {
+    Margin-bottom: 4px;
+}
+
+#info a {
+    Color: #3388cc;
+    Text-decoration: none;
+}
+
+#info a:hover {
+    Text-decoration: underline;
+}
+
+/* Login Form Inputs */
+Form {
+    Margin-top: 10px;
+    Margin-bottom: 25px;
+}
+
+.inputGroup {
+    Display: flex;
+    Align-items: center;
+    Border: 1px solid #cccccc;
+    Border-radius: 4px;
+    Background-color: #ffffff;
+    Margin-bottom: 12px;
+    Overflow: hidden;
+}
+
+.inputIcon {
+    Padding: 8px 12px;
+    Background-color: #f8f8f8;
+    Border-right: 1px solid #dddddd;
+    Color: #888888;
+    Font-size: 14px;
+}
+
+.input {
+    Flex: 1;
+    Border: none;
+    Padding: 10px 12px;
+    Font-size: 13px;
+    Outline: none;
+    Color: #333333;
+}
+
+.input::placeholder {
+    Color: #aaa;
+}
+
+/* Submit and Reset Link */
+.submit {
+    Display: flex;
+    Align-items: center;
+    Justify-content: space-between;
+    Margin-top: 15px;
+}
+
+.submit button {
+    Background-color: #007bff; /* Bright login blue */
+    Color: #ffffff;
+    Border: none;
+    Padding: 10px 30px;
+    Border-radius: 4px;
+    Font-weight: bold;
+    Font-size: 13px;
+    Cursor: pointer;
+    Transition: background-color 0.2s;
+}
+
+.submit button:hover {
+    Background-color: #0056b3;
+}
+
+.forgotLink {
+    Color: #3182ce;
+    Font-size: 12px;
+    Text-decoration: underline;
+}
+
+/* Horizontal Line & Footer */
+Hr {
+    Border: none;
+    Border-top: 1px solid #e0e0e0;
+    Margin: 20px 0 15px 0;
+}
+
+Footer {
+    Font-size: 11px;
+    Color: #555555;
+    Line-height: 1.6;
+}
+
+Footer h3.font {
+    Font-size: 13px;
+    Font-style: italic;
+    Color: #333333;
+    Margin-bottom: 8px;
+}
+
+Footer ul {
+    List-style-type: disc;
+    Margin-left: 20px;
+}
+
+Footer ul li {
+    Margin-bottom: 4px;
+}
+
+Footer strong {
+    Color: #1a202c;
+}
+
+
+
+
+
+
+
+
+
+
+
