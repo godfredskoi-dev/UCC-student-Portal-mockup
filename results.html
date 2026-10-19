@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content=”width=device-width, initial-scale="1.0">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>Student Portal</title>
     <link rel="stylesheet" href="style.css">
 
@@ -14,7 +14,7 @@
     <div id="mainCon">
         <!--Top Nav-->
               <div class="top_nav">
-                      <div class="cover_text">
+                      <div class="logoBox">
                  <img src="assets/University-of-Cape-Coast-UCC.webp" alt="University">
                  <h2>Student's Portal</h2>
                       </div>
@@ -29,30 +29,223 @@
         <!--LEFT SIDE AND RIGHT SIDE-->
         <div class="main_layout">
             <!--LEFT SIDE: sidebar-->
+            
         <div class="side_navbar">
           
-            <button class="mainBtn">Service Information</button>
-            <button class="mainBtn">Personal Details</button>
-            <button class="mainBtn">First Generational Information</button>
-            <button class="mainBtn">Verify details</button>
-            <button class="mainBtn">Elearning/MyUCC</button>
-            <button class="mainBtn">Past Question (Manual)</button>
-            <button class="mainBtn">Click here to build cv</button>
-            <button class="mainBtn">Matriculation oath</button>
-            <button class="mainBtn">MTN Data Bundle</button>
-            <button class="mainBtn">Statement Of Results</button>
-            <button class="mainBtn">Survey</button>
-            <button class="mainBtn">Registration</button>
-            <button class="mainBtn">Update GH-Card</button>
-            <button class="mainBtn">Fees</button>
-            <button class="mainBtn">Counselling Services</button>
-            <button class="mainBtn">FAQs</button>
-            <button class="mainBtn">Reset password</button>
+            <button class="mainBtn" data-section="loadingSection">Service Information</button>
+            <button class="mainBtn" data-section="loadingSection">Personal Details</button>
+            <button class="mainBtn" data-section="loadingSection">First Generational Information</button>
+            <button class="mainBtn" data-section="loadingSection">Verify details</button>
+            <button class="mainBtn" data-section="loadingSection">Elearning/MyUCC</button>
+            <button class="mainBtn" data-section="loadingSection">Past Question (Manual)</button>
+            <button class="mainBtn" data-section="loadingSection">Click here to build cv</button>
+            <button class="mainBtn" data-section="loadingSection">Matriculation oath</button>
+            <button class="mainBtn" data-section="loadingSection">MTN Data Bundle</button>
+            <button class="mainBtn" data-section="resultsSection">Statement Of Results</button>
+            <button class="mainBtn" data-section="loadingSection">Survey</button>
+            <button class="mainBtn" data-section="loadingSection">Registration</button>
+            <button class="mainBtn" data-section="loadingSection">Update GH-Card</button>
+            <button class="mainBtn" data-section="feesSection">Fees</button>
+            <button class="mainBtn" data-section="loadingSection">Counselling Services</button>
+            <button class="mainBtn" data-section="loadingSection">FAQs</button>
+            <button class="mainBtn" data-section="loadingSection">Reset password</button>
+
+        </div>
+       
+        <!--RIGHT SIDE: The Sliding Wrapper -->
+        <div id="Wrapper">
+            <section id="loadingSection" hidden>
+                <div class="loading_content">
+                    <div class="loader"></div>
+                    <h2>Loading...</h2>
+                    <p>Please wait while we retrieve your information</p>
+                </div>
+
+            </section>
+
+            <section id="feesSection" hidden>
+
+
+    <div class="fee_page">
+
+        <!-- FEE STATEMENT -->
+        <div class="fee_statement_container" id="feeStatement">
+
+            <div class="statement_title_block">
+                <h2>STUDENT FEE STATEMENT</h2>
+                <p>ACADEMIC YEAR: 2026/2027</p>
+            </div>
+
+            <!-- STUDENT DETAILS -->
+            <div class="fee_meta_grid">
+
+                <div class="meta_row">
+                    <div class="meta_item">
+                        <span class="meta_label">Student Name:</span>
+                        <span class="meta_value">BEDIAKO KOTOKU BIO</span>
+                    </div>
+
+                    <div class="meta_item">
+                        <span class="meta_label">Student ID:</span>
+                        <span class="meta_value">AG/AGR/25/0136</span>
+                    </div>
+                </div>
+
+                <div class="meta_row">
+                    <div class="meta_item">
+                        <span class="meta_label">Programme:</span>
+                        <span class="meta_value">BACHELOR OF SCIENCE(AGRICULTURE)</span>
+                    </div>
+
+                    <div class="meta_item">
+                        <span class="meta_label">Level:</span>
+                        <span class="meta_value">200</span>
+                    </div>
+                </div>
+
+                <div class="meta_row">
+                    <div class="meta_item">
+                        <span class="meta_label">Semester:</span>
+                        <span class="meta_value">First Semester</span>
+                    </div>
+
+                    <div class="meta_item">
+                        <span class="meta_label">Payment Status:</span>
+                        <span class="meta_value text_red">Outstanding</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FEE TABLE -->
+            <table class="fee_table">
+
+                <thead>
+                    <tr>
+                        <th class="col_sn">S/N</th>
+                        <th class="col_item">FEE DESCRIPTION</th>
+                        <th class="col_amount">AMOUNT (GH₵)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Academic Facility User Fee</td>
+                        <td class="amount_cell">1,200.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Academic Fees</td>
+                        <td class="amount_cell">1,480.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Student Representative Council Dues</td>
+                        <td class="amount_cell">500.00</td>
+                    </tr>
+
+                    <tr class="total_row">
+                        <td colspan="2" class="total_label">
+                            TOTAL FEES
+                        </td>
+
+                        <td class="total_amount">
+                            GH₵ 3,180.00
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <!-- PAYMENT SUMMARY -->
+            <div class="balance_summary_block">
+
+                <div class="balance_line">
+                    <span>Total Fees:</span>
+                    <span>GH₵ 3,180.00</span>
+                </div>
+
+                <div class="balance_line">
+                    <span>Amount Paid:</span>
+                    <span>GH₵ 0.00</span>
+                </div>
+
+                <div class="balance_line outstanding_line">
+                    <span>Outstanding Balance:</span>
+                    <span>GH₵ 3,000.00</span>
+                </div>
+
+            </div>
+
+            <!-- NOTICE -->
+            <div class="fee_notice">
+                <strong>IMPORTANT NOTICE</strong>
+
+                <p>
+                    Students are advised to settle their outstanding fees
+                    within the approved payment period.
+                </p>
+
+                <p>
+                    Please retain your payment receipts for future reference.
+                </p>
+            </div>
+
+            <!-- SIGNATURES -->
+            <div class="signatures_section">
+
+                <div class="sig_box">
+                    <div class="sig_line"></div>
+                    <p class="sig_title">Student's Signature</p>
+                    <p class="sig_sub">Date: ______________</p>
+                </div>
+
+                <div class="sig_box">
+                    <div class="sig_line"></div>
+                    <p class="sig_title">Authorized Officer</p>
+                    <p class="sig_sub">Date: ______________</p>
+                </div>
+
+            </div>
+
+            <!-- NO FOOTER -->
 
         </div>
 
-        <!--RIGHT SIDE: The Sliding Wrapper -->
-        <div id="Wrapper">
+
+        <!-- ACTION BUTTONS -->
+        <div class="fee_actions">
+
+            <button
+                type="button"
+                class="fee_action_btn preview_btn"
+                onclick="previewFeeStatement()">
+
+                Print Preview
+
+            </button>
+
+            <button
+                type="button"
+                class="fee_action_btn pdf_btn"
+                onclick="createFeePDF()">
+
+                Create PDF
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+            
+
+            <section id="resultsSection">
             <div class="portal_content">
                 
                 
@@ -244,11 +437,15 @@
                             </tr>
                         </tfoot>
                     </table>
+
+                    
                 </div>
             </div>
         </div>
     </div>
  </div>
+ 
+ </section>
 <script src="script.js"></script>
 </body>
 </html>

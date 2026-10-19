@@ -17,9 +17,6 @@ Body {
   Line-height: 1.5;
 }
 
-/* ==========================================
-2.	MAIN LAYOUT STRUCTURE
-   ========================================== */
 #mainCon {
   Display: flex;
  flex-direction: column;
@@ -28,9 +25,7 @@ Body {
   Width: 100%;
 }
 
-/* LEFT SIDE: Sidebar Cover / Image Container */
-
-.top_nav {
+   .top_nav {
   Display: flex;
   Justify-content: space-between;
   Align-items: center;
@@ -43,72 +38,34 @@ Body {
 
   
 }
-.cover_text{
+.logoBox{
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.cover_text img{
+.logoBox img{
    Width: 50px;
   Height: 50px;
   Object-fit: contain;
   Margin-bottom: 12px;
 }
-
-.main_layout{
-  display: flex;
-  flex: 1;
-  width: 100%;
-  overflow: hidden;
-}
-
-.side_navbar {
-  Width: 250px;
-  Background-color: #ffffff;
-  Border-right: 1px solid #e1e4e8;
-  Padding: 24px 16px;
-  Display: flex;
-  Flex-direction: column;
-  Align-items: center;
-  Flex-shrink: 0;
-  gap: 10px;
-
-}
-
-
-
-.mainBtn {
-  Width: 100%;
-  Padding: 10px 16px;
-  Background-color: #ffffff;
-  Color: black;
-  Border: none;
-  Border-radius: 6px;
-  Font-weight: 600;
+.logout_btn {
+  Background: transparent;
+  Border: 1px solid #d1d5db;
+  Padding: 6px 12px;
+  Border-radius: 4px;
+  Color: #374151;
+  Font-size: 0.8rem;
+  Font-weight: 500;
   Cursor: pointer;
-  Transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  transition: font-weight 0.2s;
 }
 
-.mainBtn:hover {
+.logout_btn:hover {
   Background-color: #1d4fd8e5;
+  font-weight: bold;
 }
-
-/* RIGHT SIDE: Portal Content Area */
-#Wrapper {
-  Flex: 1;
-  Padding: 10px 15px;
-  Background-color: #f4f6f8;
-  Overflow-y: auto;
-  box-sizing: border-box;
-}
-
-.portal_content {
-  Max-width: 1100px;
-  Margin: 0 auto;
-}
-
-
-
 .user_profile {
   Display: flex;
   Align-items: center;
@@ -134,20 +91,72 @@ Body {
   Object-fit: cover;
 }
 
-.logout_btn {
-  Background: transparent;
-  Border: 1px solid #d1d5db;
-  Padding: 6px 12px;
-  Border-radius: 4px;
-  Color: #374151;
-  Font-size: 0.8rem;
-  Font-weight: 500;
-  Cursor: pointer;
+
+/* ==========================================
+2.	MAIN LAYOUT STRUCTURE
+   ========================================== */
+
+
+
+
+
+.main_layout{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
 }
 
-.logout_btn:hover {
-  Background-color: #f3f4f6;
+.side_navbar {
+  Width: 200px;
+  Background-color: #ffffff;
+  Border-right: 1px solid #e1e4e8;
+  Padding: 24px 16px;
+  Display: flex;
+  Flex-direction: column;
+  Align-items: center;
+  Flex-shrink: 0;
+  gap: 10px;
+
 }
+.mainBtn {
+  Width: 100%;
+  Padding: 10px 16px;
+  Background-color: #ffffff;
+  Color: black;
+  Border: none;
+  Border-radius: 6px;
+  Font-weight: 600;
+  Cursor: pointer;
+  Transition: background-color 0.2s;
+}
+
+.mainBtn:hover {
+  Background-color: #1d4fd8e5;
+}
+
+
+
+
+
+/* RIGHT SIDE: Portal Content Area */
+#Wrapper {
+  Flex: 1;
+  Padding: 10px 15px;
+  Background-color: #f4f6f8;
+  Overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.portal_content {
+  Max-width: 1100px;
+  Margin: 0 auto;
+}
+
+
+
+
+
 
 /* ==========================================
 4.	HEADER SECTION
@@ -272,7 +281,7 @@ Body {
 }
 
 /* Badge styling for key status items */
-[class^=”key_badge_”] {
+[class^="key_badge_"] {
   Display: inline-block;
   Padding: 2px 8px;
   Border-radius: 4px;
@@ -359,21 +368,7 @@ Body {
   Background-color: #f9fafb;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #mainCon {
-    Flex-direction: column;
-  }
-  .image_side {
-    Width: 100%;
-    Border-right: none;
-    Border-bottom: 1px solid #e1e4e8;
-  }
-  .stats_grid {
-    Grid-template-columns: repeat(2, 1fr);
-    Gap: 20px;
-  }
-}
+
 /* ==========================================
    GRADE COLOR CODING CLASSES (Clean Naming)
    ========================================== */
@@ -407,6 +402,9 @@ Body {
   font-weight: 600;
   display: inline-block;
 }
+#menuToggle{
+  display: none;
+}
 
 /* D and D+: Yellow */
 .gradeD,
@@ -430,6 +428,670 @@ Body {
     color: #334155;
     margin-right: 8px;
 }
+
+/**
+Loading Section
+ **/
+ #loadingSection{
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 40px 20px;
+ }
+ /**Center the loading conternt**/
+ .loading_content{
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+ }
+ .loader{
+  width: 48px;
+  height: 48px;
+  border: 5px solid #e2e8f0;
+  border-top: 5px solid #1a365d;
+  border-radius: 50%;
+  animation: spin  0.8 linear infinite;
+ }
+
+ /*Animation*/
+ @keyframes spin {
+  to{
+    transform: rotate(360deg);
+  }
+ }
+
+ .loading_content h2{
+  margin: 8px 0 0;
+  color: #1a365d;
+  font-size: 20px;
+ }
+ .loading_content p{
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+ }
+ /* =========================
+   FEE PAGE
+========================= */
+
+.fee_page {
+    Width: 100%;
+    Padding: 25px;
+    Box-sizing: border-box;
+}
+
+
+/* =========================
+   FEE STATEMENT
+========================= */
+
+.fee_statement_container {
+    Width: 100%;
+    Max-width: 900px;
+    Margin: 0 auto;
+
+    Padding: 35px 40px;
+
+    Background-color: #ffffff;
+    Color: #1a1a1a;
+
+    Border: 1px solid #dcdcdc;
+    Box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    Font-family: Arial, Helvetica, sans-serif;
+    Box-sizing: border-box;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.statement_title_block {
+    Text-align: center;
+    Margin-bottom: 30px;
+}
+
+.statement_title_block h2 {
+    Margin: 0 0 8px;
+    Font-size: 23px;
+    Font-weight: 700;
+    Letter-spacing: 1px;
+}
+
+.statement_title_block p {
+    Margin: 0;
+    Font-size: 14px;
+    Font-weight: 600;
+}
+
+
+/* =========================
+   STUDENT DETAILS
+========================= */
+
+.fee_meta_grid {
+    Margin-bottom: 25px;
+}
+
+.meta_row {
+    Display: flex;
+    Justify-content: space-between;
+    Gap: 25px;
+
+    Padding: 12px 0;
+    Border-bottom: 1px solid #e5e5e5;
+}
+
+.meta_item {
+    Display: flex;
+    Flex: 1;
+    Gap: 8px;
+    Align-items: baseline;
+}
+
+.meta_label {
+    Font-weight: 600;
+    White-space: nowrap;
+}
+
+.meta_value {
+    Overflow-wrap: anywhere;
+}
+
+.text_red {
+    Color: #c62828;
+    Font-weight: 700;
+}
+
+.text_green {
+    Color: #218838;
+    Font-weight: 700;
+}
+
+
+/* =========================
+   FEE TABLE
+========================= */
+
+.fee_table {
+    Width: 100%;
+    Border-collapse: collapse;
+    Margin-bottom: 25px;
+    Font-size: 14px;
+}
+
+.fee_table th,
+.fee_table td {
+    Padding: 13px 12px;
+    Border: 1px solid #d5d5d5;
+    Text-align: left;
+}
+
+.fee_table th {
+    Background-color: #f0f3f7;
+    Font-weight: 700;
+}
+
+.fee_table .col_sn {
+    Width: 60px;
+    Text-align: center;
+}
+
+.fee_table .col_amount {
+    Width: 190px;
+    Text-align: right;
+}
+
+.fee_table .amount_cell {
+    Text-align: right;
+    White-space: nowrap;
+}
+
+.fee_table .total_row td {
+    Background-color: #f5f5f5;
+    Font-weight: 700;
+}
+
+.fee_table .total_label {
+    Text-align: right;
+}
+
+.fee_table .total_amount {
+    Text-align: right;
+    White-space: nowrap;
+}
+
+
+/* =========================
+   BALANCE SUMMARY
+========================= */
+
+.balance_summary_block {
+    Width: 100%;
+    Max-width: 450px;
+    Margin: 0 0 30px auto;
+}
+
+.balance_line {
+    Display: flex;
+    Justify-content: space-between;
+    Gap: 15px;
+
+    Padding: 10px 0;
+    Border-bottom: 1px solid #e5e5e5;
+}
+
+.outstanding_line {
+    Margin-top: 5px;
+    Padding: 13px 10px;
+
+    Background-color: #fff1f1;
+    Border: 1px solid #e5b5b5;
+
+    Color: #b71c1c;
+    Font-weight: 700;
+}
+
+
+/* =========================
+   NOTICE
+========================= */
+
+.fee_notice {
+    Margin-top: 25px;
+    Padding: 16px;
+
+    Background-color: #f8f9fa;
+    Border-left: 4px solid #2457a7;
+
+    Font-size: 13px;
+    Line-height: 1.6;
+}
+
+.fee_notice strong {
+    Display: block;
+    Margin-bottom: 8px;
+}
+
+.fee_notice p {
+    Margin: 5px 0;
+}
+
+
+/* =========================
+   SIGNATURES
+========================= */
+
+.signatures_section {
+    Display: flex;
+    Justify-content: space-between;
+    Gap: 50px;
+
+    Margin-top: 60px;
+}
+
+.sig_box {
+    Flex: 1;
+    Text-align: center;
+}
+
+.sig_line {
+    Height: 1px;
+    Background-color: #333333;
+    Margin-bottom: 10px;
+}
+
+.sig_title {
+    Margin: 0 0 8px;
+    Font-size: 13px;
+    Font-weight: 700;
+}
+
+.sig_sub {
+    Margin: 0;
+    Font-size: 12px;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.fee_actions {
+    Display: flex;
+    Justify-content: center;
+    Flex-wrap: wrap;
+    Gap: 15px;
+
+    Max-width: 900px;
+    Margin: 25px auto 10px;
+}
+
+.fee_action_btn {
+    Min-width: 160px;
+    Padding: 12px 22px;
+
+    Border: none;
+    Border-radius: 6px;
+
+    Font-size: 14px;
+    Font-weight: 600;
+
+    Cursor: pointer;
+    Transition: background-color 0.2s ease,
+                Transform 0.2s ease;
+}
+
+.fee_action_btn:hover {
+    Transform: translateY(-2px);
+}
+
+.preview_btn {
+    Background-color: #2457a7;
+    Color: #ffffff;
+}
+
+.preview_btn:hover {
+    Background-color: #19427f;
+}
+
+.pdf_btn {
+    Background-color: #218838;
+    Color: #ffffff;
+}
+
+.pdf_btn:hover {
+    Background-color: #17692a;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .fee_page {
+        Padding: 12px;
+    }
+
+    .fee_statement_container {
+        Padding: 22px 16px;
+    }
+
+    .statement_title_block h2 {
+        Font-size: 19px;
+    }
+
+    .meta_row {
+        Flex-direction: column;
+        Gap: 12px;
+    }
+
+    .meta_item {
+        Flex-wrap: wrap;
+    }
+
+    .fee_table {
+        Font-size: 12px;
+    }
+
+    .fee_table th,
+    .fee_table td {
+        Padding: 9px 6px;
+    }
+
+    .fee_table .col_amount {
+        Width: auto;
+    }
+
+    .balance_summary_block {
+        Font-size: 13px;
+    }
+
+    .signatures_section {
+        Gap: 25px;
+    }
+
+    .fee_action_btn {
+        Width: 100%;
+    }
+}
+
+
+/* =========================
+   PRINT / PDF
+========================= */
+
+@media print {
+
+    /* Hide everything by default */
+    Body * {
+        Visibility: hidden;
+    }
+
+    /* Show only the fee statement */
+    #feeStatement,
+    #feeStatement * {
+        Visibility: visible;
+    }
+
+    /* Position the statement for printing */
+    #feeStatement {
+        Position: absolute;
+        Left: 0;
+        Top: 0;
+
+        Width: 100%;
+        Max-width: none;
+        Margin: 0;
+        Padding: 15mm;
+
+        Border: none;
+        Box-shadow: none;
+        Box-sizing: border-box;
+    }
+
+    /* Keep the statement clean */
+    .fee_table tr,
+    .balance_line,
+    .fee_notice,
+    .signatures_section {
+        Break-inside: avoid;
+    }
+
+    Body {
+        Background: #ffffff;
+    }
+
+    @page {
+        Size: A4;
+        Margin: 0;
+    }
+}
+
+
+
+ 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #mainCon {
+    Flex-direction: column;
+  }
+  #Wrapper{
+    width: 100%;
+    min-width: 0;
+  }
+  .portal_content{
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+.side_navbar{
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 220px;
+  width: 220px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.side_navbar button{
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 10px;
+
+}
+  .image_side {
+    Width: 100%;
+    Border-right: none;
+    Border-bottom: 1px solid #e1e4e8;
+  }
+  .stats_grid {
+    Grid-template-columns: repeat(2, 1fr);
+    Gap: 20px;
+  }
+ 
+  .portal_header, .info_card, .stats_grid, .status_key_card{
+    min-width: 600px;
+    max-width: none;
+  }
+
+  .semester_section{
+    overflow-x: auto;
+    max-width: 100%;
+    }
+  .semester_header{
+    min-width: 600px;
+  }
+  .grades_table{
+    min-width: 600px;
+  }
+        /* Main page */
+    .fee_page {
+        Padding: 10px;
+        Width: 100%;
+        Box-sizing: border-box;
+    }
+
+    /* Statement card */
+    .fee_statement_container {
+        Width: 100%;
+        Padding: 20px 14px;
+        Margin: 0 auto;
+
+        Border-radius: 8px;
+        Box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Heading */
+    .statement_title_block {
+        Margin-bottom: 22px;
+    }
+
+    .statement_title_block h2 {
+        Font-size: 18px;
+        Line-height: 1.4;
+        Letter-spacing: 0.4px;
+    }
+
+    .statement_title_block p {
+        Font-size: 12px;
+        Margin-top: 6px;
+    }
+
+    /* Student details */
+    .fee_meta_grid {
+        Margin-bottom: 22px;
+    }
+
+    .meta_row {
+        Display: flex;
+        Flex-direction: column;
+        Gap: 12px;
+
+        Padding: 12px 0;
+    }
+
+    .meta_item {
+        Display: flex;
+        Flex-direction: column;
+        Align-items: flex-start;
+        Gap: 4px;
+
+        Min-width: 0;
+    }
+
+    .meta_label {
+        Font-size: 11px;
+        Color: #666;
+    }
+
+    .meta_value {
+        Font-size: 13px;
+        Font-weight: 600;
+        Overflow-wrap: anywhere;
+    }
+
+    /* Fee table */
+    .fee_table {
+        Width: 100%;
+        Table-layout: fixed;
+        Font-size: 11px;
+        Margin-bottom: 22px;
+    }
+
+    .fee_table th,
+    .fee_table td {
+        Padding: 10px 5px;
+        Overflow-wrap: anywhere;
+        Line-height: 1.4;
+    }
+
+    .fee_table .col_sn {
+        Width: 30px;
+    }
+
+    .fee_table .col_amount {
+        Width: 100px;
+    }
+
+    .fee_table .amount_cell,
+    .fee_table .total_amount {
+        White-space: normal;
+        Text-align: right;
+    }
+
+    .fee_table .total_label {
+        Text-align: right;
+    }
+
+    /* Payment summary */
+    .balance_summary_block {
+        Width: 100%;
+        Max-width: none;
+        Margin: 0 0 22px;
+        Font-size: 12px;
+    }
+
+    .balance_line {
+        Gap: 10px;
+        Padding: 12px 0;
+    }
+
+    .balance_line span:first-child {
+        Flex: 1;
+    }
+
+    .balance_line span:last-child {
+        Text-align: right;
+        Overflow-wrap: anywhere;
+    }
+
+    .outstanding_line {
+        Padding: 12px 8px;
+        Gap: 8px;
+    }
+
+    /* Notice */
+    .fee_notice {
+        Margin-top: 20px;
+        Padding: 12px;
+        Font-size: 12px;
+        Line-height: 1.6;
+    }
+
+    /* Signature section */
+    .signatures_section {
+        Display: flex;
+        Flex-direction: column;
+        Gap: 35px;
+        Margin-top: 40px;
+    }
+
+    .sig_box {
+        Width: 100%;
+    }
+
+    /* Action buttons, if present on this page */
+    .fee_actions {
+        Display: flex;
+        Flex-direction: column;
+        Gap: 10px;
+        Margin-top: 18px;
+    }
+
+    .fee_action_btn {
+        Width: 100%;
+        Min-height: 44px;
+    }
+
+  }
 
 /** Log IN Page**/
 
@@ -656,6 +1318,21 @@ Footer ul li {
 
 Footer strong {
     Color: #1a202c;
+}
+
+@media (max-width:600px){
+  .portalBanner{
+    padding: 5px 12px;
+    gap: 6px;
+    border-radius: 0 0 20px 20px;
+  }
+  .portalBanner img{
+    height: 22px;
+    width: auto;
+  }
+  .portalBanner span{
+    font-size: 8px;
+  }
 }
 
 

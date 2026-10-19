@@ -88,3 +88,51 @@ if(signOut){
 
 });
 }
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('#Wrapper > section');
+
+    sections.forEach(function(section) {
+        section.hidden = true;
+    });
+
+    const selectedSection = document.getElementById(sectionId);
+
+    if (selectedSection) {
+        selectedSection.hidden = false;
+    }
+}
+
+const mainButtons = document.querySelectorAll('.mainBtn');
+
+mainButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        const sectionId = button.dataset.section;
+
+        if (sectionId) {
+            showSection(sectionId);
+        }
+    });
+});
+
+
+
+//Adding the failed to load page
+
+// =========================
+// PRINT PREVIEW
+// =========================
+
+function previewFeeStatement() {
+    window.print();
+}
+
+
+// =========================
+// CREATE PDF
+// =========================
+
+function createFeePDF() {
+    window.print();
+}
+
+
