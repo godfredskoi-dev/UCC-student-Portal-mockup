@@ -1018,13 +1018,13 @@ Loading Section
 
         Flex-direction: column;
 
-        Flex: 0 0 76px;
+        Flex: 0 0 100px;
 
-        Width: 76px;
+        Width: 100px;
 
-        Min-width: 76px;
+        Min-width: 100px;
 
-        Max-width: 76px;
+        Max-width: 100px;
 
         Min-height: 0;
 
@@ -1054,7 +1054,7 @@ Loading Section
 
         Padding: 9px 3px;
 
-        Font-size: 10px;
+        Font-size: 7px;
 
         Line-height: 1.25;
 
@@ -1062,7 +1062,9 @@ Loading Section
 
         White-space: normal;
 
-        Overflow-wrap: anywhere;
+        word-break: normal;
+
+        Overflow-wrap: break-word;
 
     }
 
